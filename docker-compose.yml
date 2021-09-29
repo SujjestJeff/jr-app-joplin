@@ -1,0 +1,12 @@
+version: '3'
+services:
+  gimpui:
+    image: jr-app-joplin
+    environment:
+     - VNC_PASSWORD=jr
+     - DISPLAY_WIDTH=1462
+     - DISPLAY_HEIGHT=820
+    volumes:
+      - ~/joplin:/app/.config:rw
+    ports:
+     - 5802:5800
