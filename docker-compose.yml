@@ -4,8 +4,9 @@ services:
     image: jr-app-joplin
     environment:
      - VNC_PASSWORD=jr
-     - DISPLAY_WIDTH=1462
+     - DISPLAY_WIDTH=1280
      - DISPLAY_HEIGHT=820
+     - X11VNC_EXTRA_OPTS=-fixscreen V=.4
     volumes:
       - ~/joplin:/app/.config:rw
     ports:
